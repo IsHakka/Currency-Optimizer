@@ -1,6 +1,6 @@
 # Implementation Plan
 
-- [x] 1. 建立專案基礎架構和開發環境
+- [ ] 1. 建立專案基礎架構和開發環境
   - 使用 Vite 建立 React + TypeScript 專案
   - 安裝和設定必要的依賴套件 (Zustand, shadcn ui, Recharts, Axios, Tailwind CSS)
   - 設定 ESLint, Prettier, 和 TypeScript 配置
