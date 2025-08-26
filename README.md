@@ -6,6 +6,7 @@
 
 - **前端框架**: React 18 + TypeScript
 - **建置工具**: Vite
+- **套件管理**: pnpm
 - **狀態管理**: Zustand
 - **UI 框架**: Tailwind CSS + shadcn/ui
 - **圖表庫**: Recharts
@@ -15,27 +16,42 @@
 
 1. 安裝依賴套件：
 ```bash
-npm install
+pnpm install
 ```
 
 2. 啟動開發伺服器：
 ```bash
-npm run dev
+pnpm dev
 ```
 
 3. 建置專案：
 ```bash
-npm run build
+pnpm build
 ```
 
 4. 程式碼格式化：
 ```bash
-npm run format
+pnpm format
 ```
 
 5. 程式碼檢查：
 ```bash
-npm run lint
+pnpm lint
+```
+
+## shadcn/ui 組件
+
+專案已配置 shadcn/ui，可以使用以下命令添加組件：
+
+```bash
+pnpm dlx shadcn@latest add [component-name]
+```
+
+例如：
+```bash
+pnpm dlx shadcn@latest add button
+pnpm dlx shadcn@latest add card
+pnpm dlx shadcn@latest add input
 ```
 
 ## 專案結構
@@ -43,13 +59,16 @@ npm run lint
 ```
 src/
 ├── components/     # React 組件
+│   └── ui/         # shadcn/ui 組件
+├── lib/            # 工具函數和配置
+│   └── utils.ts    # shadcn/ui 工具函數
 ├── services/       # API 服務層
 ├── stores/         # Zustand 狀態管理
 ├── types/          # TypeScript 型別定義
-├── utils/          # 工具函數
+├── utils/          # 自定義工具函數
 ├── App.tsx         # 主應用程式組件
 ├── main.tsx        # 應用程式入口點
-└── index.css       # 全域樣式
+└── index.css       # 全域樣式 (含 shadcn/ui CSS 變數)
 ```
 
 ## 功能特色
